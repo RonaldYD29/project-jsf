@@ -12,8 +12,20 @@ import javax.faces.bean.ViewScoped;
 public class PrincipalController {
 
     private List<Empleado> empleados;
+    
+    private List<Empleado> empleadosFiltrados;
+
+    public List<Empleado> getEmpleadosFiltrados() {
+        return empleadosFiltrados;
+    }
+
+    public void setEmpleadosFiltrados(List<Empleado> empleadosFiltrados) {
+        this.empleadosFiltrados = empleadosFiltrados;
+    }
 
     private EmpleadoService empleadoService = new EmpleadoService();
+    
+    
     
     @PostConstruct
     public void init(){
